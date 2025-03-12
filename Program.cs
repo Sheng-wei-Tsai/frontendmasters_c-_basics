@@ -4,25 +4,89 @@ internal class Program
 {
   private static void Main(string[] args)
   {
-    // strings
-   string name = "Henry";
-   string name2 = "Henry1";
-   string greeting = $"Hello, {name}";
-   Console.WriteLine(greeting);
-   var comparision = string.Equals(name, name2);
-   Console.WriteLine(comparision);
+    // if statements
+   int age = 18;
+   if(age >= 18)
+   {
+    Console.WriteLine("You are an adult");
+   }
+   // switch statement
+  //  int day = 3;
+  //  switch(day)
+  //  {
+  //    case 1:
+  //    Console.WriteLine("Monday");
+  //    break;
+  //    case 2:
+  //    Console.WriteLine("Tuesday");
+  //    break;
+  //    case 3:
+  //    Console.WriteLine("Wednesday");
+  //    break;
+  //    case 4:
+  //    Console.WriteLine("Thursday");
+  //    break;
+  //    case 5:
+  //    Console.WriteLine("Friday");
+  //    break;
+  //    case 6:
+  //    Console.WriteLine("Saturday");
+  //    break;
+  //    case 7:
+  //    Console.WriteLine("Sunday");
+  //    break;
+  //    default:
+  //    Console.WriteLine("Invalid day");
+  //    break;
+  //  }
 
-   string nameSpace = string.Empty;
+  // switch expression
+    int day = 3;
+    string dayName = day switch
+  {
+    1 => "Monday",
+    2 => "Tuesday",
+    3 => "Wednesday",
+    4 => "Thursday",
+    5 => "Friday",
+    6 => "Saturday",
+    7 => "Sunday",
+    _ => "Invalid day"
+  };
 
-   var isNullOrEmpty = string.IsNullOrEmpty(nameSpace);
-   Console.WriteLine(isNullOrEmpty);
+    // Console.WriteLine(dayName);
+    // loop
+      //for or foreach
+    //   for(int i = 0; i < 5; i++)
+    // {
+    //   Console.WriteLine(i);
+    // }
+    // while loop
+    // while(true)
+    // {
+    //   break;
+    // }
+    int[] arr = [1, 2, 3, 4, 5];
+    foreach(var value in arr)
+    {
+      // Console.WriteLine(value);
+    }
 
-   var isNullOrWhiteSpace = string.IsNullOrWhiteSpace(nameSpace);
-   Console.WriteLine(isNullOrWhiteSpace);
+    // continue
+    for (int i = 0; i < 10; i++)
+    {
+      if(i == 5)
+      {
+        continue;
+      }
+      Console.WriteLine(i);
+    }
+
+
+
+
+
+
   }
-
-  // string equality Equals
-
-
-
 }
+
