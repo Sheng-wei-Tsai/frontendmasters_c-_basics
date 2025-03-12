@@ -1,39 +1,17 @@
 ﻿internal class Program
 {
-    private static void Main(string[] args)
-    {
-      // syntax Console.WriteLine("Hello, World!!!");
-      //  C# strick type
-      // var is a good way to declare a variable
-      var name = "Henry";
-      Console.WriteLine($"Hello, {name}!!!");
+  private static void Main(string[] args)
+  {
+    // build-in types
+    // Datetime
+    Console.WriteLine(DateTime.Now);
+    // If you're using DateTime.UtcNow, you're using the current date and time in UTC (Coordinated Universal Time). Avoid using DateTime.Now in pretty much all cases for production code.
+    Console.WriteLine(DateTime.UtcNow);
 
-      // Methods
-      int a = 1;
-      int b = 2;
+    // string is mutable
+    string name = "Henry";
+    name = name.ToUpper();
+    Console.WriteLine(name);
+  }
 
-      // int c = AddNumbers(1, 2, 3, 4);
-      // Console.WriteLine(c);
-
-      Console.WriteLine(IsEven(2));
-
-    }
-
-    // public static int AddNumbers(int a, int b = 5)
-    // {
-    //   return a + b;
-    // }
-
-    // public static int AddNumbers(params int[] integers)
-    // {
-
-    // }
-
-    public static bool IsEven(int number)
-    {
-      if (number % 2 == 0) {
-        return true;
-      }
-      return false;
-    }
 }
