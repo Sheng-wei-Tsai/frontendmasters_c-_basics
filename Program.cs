@@ -1,36 +1,28 @@
-﻿internal class Program
+﻿using Microsoft.VisualBasic;
+
+internal class Program
 {
   private static void Main(string[] args)
   {
-    // build-in types
-    // int[]  arrayOfIntegers = [1, 2, 3, 4, ];
-    // // Console.WriteLine(arrayOfIntegers.Length);
+    // strings
+   string name = "Henry";
+   string name2 = "Henry1";
+   string greeting = $"Hello, {name}";
+   Console.WriteLine(greeting);
+   var comparision = string.Equals(name, name2);
+   Console.WriteLine(comparision);
 
+   string nameSpace = string.Empty;
 
-    // foreach( char character in "Hello World!")
-    // {
-    //   Console.Write(character);
-    // }
-    // Tuple
-    var personInfo = (Age: 30, Name: "Alice", IsEmployed: true);
-    Console.WriteLine(personInfo.Age);
-    Console.WriteLine(personInfo.Name);
-    Console.WriteLine(personInfo.IsEmployed);
+   var isNullOrEmpty = string.IsNullOrEmpty(nameSpace);
+   Console.WriteLine(isNullOrEmpty);
 
-
-    // var employeeType = EmployeeType.Developer;
-    // Console.WriteLine(employeeType);
-    foreach( var e in Enum.GetValues(typeof(EmployeeType)))
-    Console.WriteLine(e);
+   var isNullOrWhiteSpace = string.IsNullOrWhiteSpace(nameSpace);
+   Console.WriteLine(isNullOrWhiteSpace);
   }
-  // Enums
-  enum EmployeeType
-  {
-    Manager = 2,
-    Developer = 3,
-    Designer = 4,
-    Supervisor = 5,
-    Worker = 6,
-  }
+
+  // string equality Equals
+
+
 
 }
